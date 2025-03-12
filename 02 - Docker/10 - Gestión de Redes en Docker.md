@@ -10,19 +10,19 @@
 + Macvlan, se usa en escenarios donde el contenedor requiere una dirección MAC y conectividad de red directa a la red subyacente. Asigna un MAC al contenedor. Permite que nuestro contenedor aparezca como un host físico. Pero muchos servicios en la nube no son compatiblen con esto.
 + Overlay, VPN, se suele usar cuando se montan cluster de swat, cluster de docker.
 
-`brctl show`, permite ver los dispositivos bridge que tengo.
-`docker network ls` me dice que los tipos de red que hay en los contenedores.
-`docker network inspect bridge` es el docker0.
-`docker network create --driver bridge nameNetwork` nos permite crear una network.
-`docker run --net=nameNetwork` nos permite crear un nuevo contenedor con la network especificada.
-connect así muevo un contenedor de redes.
++ `brctl show`, permite ver los dispositivos bridge que tengo.
++ `docker network ls` me dice que los tipos de red que hay en los contenedores.
++ `docker network inspect bridge` es el docker0.
++ `docker network create --driver bridge nameNetwork` nos permite crear una network.
++ `docker run --net=nameNetwork` nos permite crear un nuevo contenedor con la network especificada.
++ connect así muevo un contenedor de redes.
 
 Cuando **exponemos** puertos en un contenedor se exponen de forma interna, no se va a la red.<br>
 Cuando **publicamos** puertos en un contenedor se hace para que desde fuera se pueda acceder a mi contenedor. Se redireccionara Docker con las tablas de IPTABLE.<br>
 No se pueden publicar puertos que mi contenedor no exponga.<br>
 Los puetos que se exponen de forma automática por el host no se mantien cuando un contenedor se borra o se para. (Mirarlo)
 
-`docker run -p puertoHost:puertoContenedor` lo que hace es redireccionar al puertoHost con el puertoContenedor. El puertoHost tiene que estar libre.
-`docker run -P` redirecciona cualquier puerto expuerto en el contenedor con cualquier puerto del host.
-`docker port nameContainer` me dice que puertos estan expuestos en el contenedor.
++ `docker run -p puertoHost:puertoContenedor` lo que hace es redireccionar al puertoHost con el puertoContenedor. El puertoHost tiene que estar libre.
++ `docker run -P` redirecciona cualquier puerto expuerto en el contenedor con cualquier puerto del host.
++ `docker port nameContainer` me dice que puertos estan expuestos en el contenedor.
 
