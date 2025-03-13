@@ -24,5 +24,5 @@ Los puetos que se exponen de forma automática por el host no se mantien cuando 
 
 + `docker run -p puertoHost:puertoContenedor` lo que hace es redireccionar al puertoHost con el puertoContenedor. El puertoHost tiene que estar libre.
 + `docker run -P` redirecciona cualquier puerto expuerto en el contenedor con cualquier puerto del host.
-+ `docker port nameContainer` me dice que puertos estan expuestos en el contenedor.
++ `docker container port nameContainer` me dice que puertos estan expuestos en el contenedor.
 
