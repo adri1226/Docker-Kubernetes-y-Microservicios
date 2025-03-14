@@ -16,8 +16,4 @@ No es:
 
 kubectl se comunica con la api de kubernetes.
 
-### Componentes Master Node
-![alt text](img/image-10.png)
-
-+ kube-api-server, me permite comunicar kubernetes, este componente es el que acepta las peticiones.
 

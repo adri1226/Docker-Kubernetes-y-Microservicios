@@ -46,4 +46,5 @@ Hay un limite (LIMIT) que es el limite de memoria de mi sistema.
 + `docker network create --driver bridge nameNetwork` nos permite crear una network.
 + `docker network connect netName containerName` conectamos el contenedor a la ntework una vez ya se ha lanzado el contenedor.
 + `docker container port nameContainer` me dice que puertos estan expuestos en el contenedor.
++ `docker system prune -a` elimina **TODO** lo que no este en marcha.
 + `ctrl+p ctrl+q` manda a detached el contenedor.
